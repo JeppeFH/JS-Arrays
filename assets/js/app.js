@@ -68,3 +68,5 @@ sortedArrayBoys.map((element) => {
 let filteredArrayBoth = arrayBoth.filter((element) => element.length > 5);
 
 both.innerHTML = ` <p>${filteredArrayBoth.join("<br>")}</p> `;
+
+/*Array opgave*/
