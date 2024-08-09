@@ -1,7 +1,7 @@
 /*Variabler*/
-const girls = document.querySelectorAll(".output-girls");
-const boys = document.querySelectorAll(".output-boys");
-const both = document.querySelectorAll(".output-both");
+const girls = document.querySelector(".output-girls");
+const boys = document.querySelector(".output-boys");
+const both = document.querySelector(".output-both");
 
 /*Arrays*/
 let arrayGirls = [
@@ -41,3 +41,30 @@ let arrayBoth = [
   "Billie",
   "Björk",
 ];
+
+/*Array girls*/
+arrayGirls.forEach((element) => {
+  girls.innerHTML += `
+  
+  <p>${element}</p>
+  
+  
+  `;
+});
+
+/*Array Boys*/
+let sortedArrayBoys = arrayBoys.sort();
+
+sortedArrayBoys.map((element) => {
+  boys.innerHTML += `
+    
+    <p>${element}</p>
+    
+    
+    `;
+});
+
+/*Array Both*/
+let filteredArrayBoth = arrayBoth.filter((element) => element.length > 5);
+
+both.innerHTML = ` <p>${filteredArrayBoth.join("<br>")}</p> `;
